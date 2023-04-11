@@ -1,11 +1,9 @@
 # Bioskop
 
 ## Nama Anggota
--Amalia Kartika Sari
-
--Angelia Cristin
-
--Bertha Joy Rodo Saragi
+- Amalia Kartika Sari (22091160)
+- Angelia Cristin (2209116015)
+- Bertha Joy Rodo Saragi (2209116047)
 
 ### Deskripsi
 
