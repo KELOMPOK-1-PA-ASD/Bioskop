@@ -15,4 +15,4 @@ Struktur Program yang kami gunakan pada project yang berjudul “Bioskop” kali
 1.	Pretty Table
 Pada kesempatan Big Project kali ini, kami menggunakan Pretty table untuk menyimpan serta menampilkan data pada bentuk tabel agar tampilan terlihat lebih rapih dan mempermudah pembaca untuk mencari data yang diinginkan. 
 2. Linked list
-Penerapan Linked list pada Big Project kami di
+Penerapan Linked list pada Big Project kami di program kami
