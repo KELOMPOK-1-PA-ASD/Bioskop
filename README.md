@@ -195,18 +195,70 @@ Kami menggunakan Database Mysql karena sebelumnya kami telah mempelajari databas
 import mysql.connector
 
 mydb = mysql.connector.connect(
-host="db4free.net ",
-user="kelompok_1",
-password="kelompoksatu",
-database="bioskop_1"
+  host="db4free.net ",
+  user="kelompok_1",
+  password="kelompoksatu",
+  database="bioskop_1"
 )
 
+print("film Yang Anda Pilih Telah Dibeli")
 sql = "INSERT INTO invoice (nama_film, jam_tayang, harga, uang, kembalian) VALUES (%s,%s,%s,%s,%s)"
 val = (nama_film, jam_tayang, harga, uang, kembalian)
-mycursor = mydb.cursor()
 mycursor.execute(sql, val)
 mydb.commit()
 print(mycursor.rowcount, "record inserted.")
 
+username = input('Masukan Nama Baru: ')
+password = input('Masukan Password Baru: ')
+
+ceknama = "SELECT * FROM data_pelanggan WHERE username = %s and password = %s"
+values = (username, password)
+
+cursor = mydb.cursor()
+cursor.execute(ceknama, values)
+
+pelanggan = cursor.fetchone()
+if pelanggan:
+    print('Maaf, Username ini sudah digunakan')
+    register()
+else:
+    sql = "INSERT INTO data_pelanggan (username, password) VALUES (%s,%s)"
+    val = (username, password)
+    cursor.execute(sql, val)
+    mydb.commit()
+    print(cursor.rowcount, "record inserted.")
+    
+cek = "SELECT * FROM data_admin WHERE username = %s AND password = %s"
+values = (username, password)
+
+cursor = mydb.cursor()
+cursor.execute(cek, values)
+
+pegawai = cursor.fetchone()
+
 ```
+
+##Fitur dan Fungsionalitas
+
+Terdapat 3 bagian besar fitur di dalam Big Project kami. yaitu Menu Login, Menu Admin, dan Menu Pelanggan.
+
+1. Menu login
+
+Fitur yang ada di dalam menu login ada 3 yaitu Login sebagai Admin, Pelanggan, dan Pelanggan Baru. dapat di lihat pada gambar di bawah ini.
+
+![menu login](https://user-images.githubusercontent.com/122262846/234256985-1852bb45-ac7c-4f34-946c-2a80efac4f08.png)
+
+- Menu Login Admin
+pada menu login admin kita diminta untuk memasukkan nama dan password agar dapat masuk ke dalam menu admin. jika nama dan password salah, maka akan mengulang saat memasukkan nama dan password, tetapi jika benar akan masuk ke dalam menu admin
+
+- Menu Login Pengguna
+Pada menu ini, kita juga akan diminta untuk 
+
+2. Menu Admin
+
+![menu admin](https://user-images.githubusercontent.com/122262846/234257046-5ac4cc22-182f-45d5-9df2-3851fe1f91a1.png)
+
+3. Menu Pelanggan
+
+![menu pelanggan](https://user-images.githubusercontent.com/122262846/234257139-90b88f65-90e7-4cb1-8586-a6a1dc748bb2.png)
 
