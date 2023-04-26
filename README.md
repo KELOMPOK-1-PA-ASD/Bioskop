@@ -244,21 +244,101 @@ Terdapat 3 bagian besar fitur di dalam Big Project kami. yaitu Menu Login, Menu 
 
 1. Menu login
 
-Fitur yang ada di dalam menu login ada 3 yaitu Login sebagai Admin, Pelanggan, dan Pelanggan Baru. dapat di lihat pada gambar di bawah ini.
+Fitur yang ada di dalam menu login ada 4 yaitu Login sebagai Admin, Pelanggan, Pelanggan Baru, dan Keluar Aplikasi. dapat di lihat pada gambar di bawah ini.
 
 ![menu login](https://user-images.githubusercontent.com/122262846/234256985-1852bb45-ac7c-4f34-946c-2a80efac4f08.png)
 
 - Menu Login Admin
 pada menu login admin kita diminta untuk memasukkan nama dan password agar dapat masuk ke dalam menu admin. jika nama dan password salah, maka akan mengulang saat memasukkan nama dan password, tetapi jika benar akan masuk ke dalam menu admin
 
+![login admin](https://user-images.githubusercontent.com/122262846/234479456-840101aa-f398-4a05-bba3-7eeb055fb6e1.png)
+
+
 - Menu Login Pengguna
-Pada menu ini, kita juga akan diminta untuk 
+
+Pada menu ini, kita juga akan diminta untuk memasukkan nama dan password kita.jika nama dan password benar maka akan masuk ke menu pengguna. dan jika gagal maka akan berulang saat memasukkan nama dan password
+
+![login pengguna](https://user-images.githubusercontent.com/122262846/234479541-e806e4cb-8ed2-4e4d-8899-33914f17a602.png)
+
+- Menu Pengguna baru
+
+Pada menu Pengguna baru, akan diarahkan untuk membuat akun baru dengan memasukkan nama dan password seperti gabar di bawah ini. lalu akan masuk ke database yang dimana semua akun pengguna disimpan.
+
+![register](https://user-images.githubusercontent.com/122262846/234479698-b566abdb-f833-4b6b-b0de-280b911f3cbd.png)
+
+- Keluar Aplikasi
+
+![KA Login](https://user-images.githubusercontent.com/122262846/234490420-3c7a8d2b-64b3-42ac-80ac-24179e0b0d9f.png)
+
 
 2. Menu Admin
 
 ![menu admin](https://user-images.githubusercontent.com/122262846/234257046-5ac4cc22-182f-45d5-9df2-3851fe1f91a1.png)
 
+- Tambah Film
+
+![tambah film](https://user-images.githubusercontent.com/122262846/234489548-11186917-e582-4a34-82df-e9676d4b81ab.png)
+
+
+- Lihat Film
+
+![lihat film](https://user-images.githubusercontent.com/122262846/234489582-141acf3e-1554-46b9-b385-e5c2088e4bf8.png)
+
+- Cari Film
+
+![cari film](https://user-images.githubusercontent.com/122262846/234489615-81abadbf-dfc2-4b53-bc1e-4f12c27ca2a0.png)
+
+
+![hasil cari](https://user-images.githubusercontent.com/122262846/234489745-b88dcd86-63da-498f-866b-c08900a99824.png)
+
+- Hapus Film
+
+![hapus film](https://user-images.githubusercontent.com/122262846/234489837-fc01587f-6220-46ea-be04-db5468c061a5.png)
+
+
+- Ubah Film
+
+![update film](https://user-images.githubusercontent.com/122262846/234489875-76a7bc90-b8d1-4176-a52f-86ce55eefe6d.png)
+
+![update film 2](https://user-images.githubusercontent.com/122262846/234489897-95b4c3dc-ba64-45f0-8e29-4b3996979c5e.png)
+
+
+- Log Out
+
+![log out](https://user-images.githubusercontent.com/122262846/234489949-674ae054-d609-46a9-9485-2e8bc18c245d.png)
+
+- Keluar Aplikasi
+
+![KA Admin](https://user-images.githubusercontent.com/122262846/234490070-41683d59-88ea-4e10-b860-0600282d1fed.png)
+
+
 3. Menu Pelanggan
 
+Pada menu Pelanggan ini, terdapat 4 fitur diantaranya ada struk pembelian, beli film, log out, dan keluar aplikasi seperti gambar di bawah ini
+
 ![menu pelanggan](https://user-images.githubusercontent.com/122262846/234257139-90b88f65-90e7-4cb1-8586-a6a1dc748bb2.png)
+
+Fungsionalitas dari Fitur di atas antara lain:
+
+- struk pembelian
+Setelah membeli Film, maka akan ada struk pembelian yang disimpan pada database. maka setiap ada pembelian, maka akan tercatat data film yang telah di beli pada database. tampilan invoice ada pada gambar di bawah ini
+
+![invoice](https://user-images.githubusercontent.com/122262846/234488506-09d1a7c7-0c8d-4039-af6e-0bb7d4f52698.png)
+
+- Beli Film
+Fitur Beli Film ini berfungsi agar kita bisa membeli film yang ada. jika memilih fitur beli film, maka akan muncul isi film yang ada. lalu pilih film dan masukkan nominal uang. jika pembayaran berhasil, maka data pembelian film akan tersimpan pada database invoice.
+
+![beli film](https://user-images.githubusercontent.com/122262846/234488551-cfe03b43-3de7-4eba-9dce-740f7cc57e05.png)
+
+- Log Out
+Fitur log out berfungsi untuk keluar dari akun saat ini. jika memiliki 2 akun, maka kita akan bisa memasukkan akun tersebut lagi.
+
+![log out](https://user-images.githubusercontent.com/122262846/234488589-d166a83b-df6f-467c-ab5d-91a209eaaaa6.png)
+
+- Keluar Aplikasi
+Fitur Keluar Aplikasi ini fungsinya untuk memberhentikan program.
+
+![KA Pengguna](https://user-images.githubusercontent.com/122262846/234490460-0118fa9c-8293-44e2-bc32-59402e342fbe.png)
+
+
 
