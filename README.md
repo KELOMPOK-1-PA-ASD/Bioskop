@@ -12,7 +12,7 @@ program ini merupakan program bioskop dimana ada login untuk admin dan user atau
 
 ## Struktur Program 
 Struktur Program yang kami gunakan pada project yang berjudul “Bioskop” kali ini adalah:
-1.	Pretty Table
+### 1.	Pretty Table
 
 Pada kesempatan Big Project kali ini, kami menggunakan Pretty table untuk menyimpan serta menampilkan data pada bentuk tabel agar tampilan terlihat lebih rapih dan mempermudah pembaca untuk mencari data yang diinginkan. 
 ``` python
@@ -31,7 +31,7 @@ def membeli_film(self):
     print(tabel)
 
 ```
-2. Singly Linked list
+### 2. Singly Linked list
 
 Penerapan Singly Linked list pada Big Project kami ditujukan agar dapat mengimplementasi struktur data lain. alasan kami menggunakan singly linked list adalah karna singly linked list adalah struktur data yang termudah untuk di cocokkan ke struktur data lain.
 ``` python
@@ -94,7 +94,7 @@ class LinkedList:
         yield val
 ```
 
-3. Sort with Quick Sort
+### 3. Sort with Quick Sort
 
 Kami menggunakan Quick Sort dalam menyorting data yang masuk pada Penyimpanan data User. kami memilih Quick Sort daripada sorting yang lain adalah karna Quick Sort lebih mudah di implementasikan pada Big Project kami
 
@@ -118,7 +118,7 @@ def quickSort(arr, low, high):
         quickSort(arr, pi+1, high)
 ```
 
-4. Search with Fibonacci search
+### 4. Search with Fibonacci search
 
 Untuk serach, kami menggunakan Fibonacci search karna cocok untuk Big Project kami kali ini. Fibonacci search ini juga lebih cepat mengakses data pada suatu storage algoritma. implementasinya adalah saat mencari film yang ingin di beli, maka program akan mencari terlebih dahulu agar film dapat di cari
 
@@ -150,7 +150,7 @@ def searching(isi, x, n):
     return -1
 ```
 
-5. Struktur data dengan Queue
+### 5. Struktur data dengan Queue
 
 Struktur data yang kami terapkan pada Big Project ini adalah Struktur data Queue. dengan Struktur data ini, kita dapat menambah data dengan sesuai antrian yang dimana bertujuan agar data yang masuk teratur. dan kita juga dapat menghapus data sesuai antrian.
 
@@ -172,7 +172,7 @@ class Queue:
         return self.items
 ```
 
-6. List untuk menyimpan data
+### 6. List untuk menyimpan data
 
 kami juga menggunakan list penyimpanan biasa yang dimana dapat menyimpan data yang ingin di tambah, ubah, edit, bahkan menghapus data yang ada di list tersebut
 
@@ -187,7 +187,7 @@ kusus_jam_tayang = []
 kusus_harga = []             
 kusus_nama_user = []
 ```
-7. Database Menggunakan Mysql
+### 7. Database Menggunakan Mysql
 
 Kami menggunakan Database Mysql karena sebelumnya kami telah mempelajari database tersebut dan juga karna database ini lebih simple dan mudah untuk di terapkan dalam Big project kami.
 
@@ -238,104 +238,121 @@ pegawai = cursor.fetchone()
 
 ```
 
-##Fitur dan Fungsionalitas
-
+## Fitur dan Fungsionalitas
 Terdapat 3 bagian besar fitur di dalam Big Project kami. yaitu Menu Login, Menu Admin, dan Menu Pelanggan.
 
-1. Menu login
-
+### A. Menu login
 Fitur yang ada di dalam menu login ada 4 yaitu Login sebagai Admin, Pelanggan, Pelanggan Baru, dan Keluar Aplikasi. dapat di lihat pada gambar di bawah ini.
 
 ![menu login](https://user-images.githubusercontent.com/122262846/234256985-1852bb45-ac7c-4f34-946c-2a80efac4f08.png)
 
-- Menu Login Admin
+#### 1. Menu Login Admin
 pada menu login admin kita diminta untuk memasukkan nama dan password agar dapat masuk ke dalam menu admin. jika nama dan password salah, maka akan mengulang saat memasukkan nama dan password, tetapi jika benar akan masuk ke dalam menu admin
 
 ![login admin](https://user-images.githubusercontent.com/122262846/234479456-840101aa-f398-4a05-bba3-7eeb055fb6e1.png)
 
 
-- Menu Login Pengguna
-
+#### 2. Menu Login Pelanggan
 Pada menu ini, kita juga akan diminta untuk memasukkan nama dan password kita.jika nama dan password benar maka akan masuk ke menu pengguna. dan jika gagal maka akan berulang saat memasukkan nama dan password
 
 ![login pengguna](https://user-images.githubusercontent.com/122262846/234479541-e806e4cb-8ed2-4e4d-8899-33914f17a602.png)
 
-- Menu Pengguna baru
-
+#### 3. Menu Pelanggan baru
 Pada menu Pengguna baru, akan diarahkan untuk membuat akun baru dengan memasukkan nama dan password seperti gabar di bawah ini. lalu akan masuk ke database yang dimana semua akun pengguna disimpan.
 
 ![register](https://user-images.githubusercontent.com/122262846/234479698-b566abdb-f833-4b6b-b0de-280b911f3cbd.png)
 
-- Keluar Aplikasi
+#### 4. Keluar Aplikasi
 
 ![KA Login](https://user-images.githubusercontent.com/122262846/234490420-3c7a8d2b-64b3-42ac-80ac-24179e0b0d9f.png)
 
 
-2. Menu Admin
+### B. Menu Admin
+Fitur yang digunakan pada menu admin ada 9 yaitu:
 
 ![menu admin](https://user-images.githubusercontent.com/122262846/234257046-5ac4cc22-182f-45d5-9df2-3851fe1f91a1.png)
 
-- Tambah Film
+#### 1. Tambah Film
+Fitur ini berfungsi untuk menambah data film yang dapat dibeli oleh pelanggan. Dalam menambah film, admin harus menginput data film berupa nama atau judul film, jam tayang film dan harga film. 
 
 ![tambah film](https://user-images.githubusercontent.com/122262846/234489548-11186917-e582-4a34-82df-e9676d4b81ab.png)
 
 
-- Lihat Film
+#### 2. Lihat Film
+Fitur ini berfungsi untuk menampilkan data film yang tersedia. Dalam fitur lihat film ini, admin dapat melihat film apa saja yang terdata dengan jam tayang dan harga film tersebut.
 
 ![lihat film](https://user-images.githubusercontent.com/122262846/234489582-141acf3e-1554-46b9-b385-e5c2088e4bf8.png)
 
-- Cari Film
+#### 3. Cari Film
+Fitur ini digunakan untuk mencari film, untuk mengetahui apakah film itu tersedia atau tidak tersedia. Untuk menggunakan fitur ini admin harus menginput judul film yang akan dicari dengan benar. Apabila admin sudah mengiput data yang diminta oleh program dengan benar, maka program akan memberikan output berupa letak dari film yang dicari oleh admin tersebut. Apabila data yang diinput oleh admin tidak ada dalam data film, maka program akan memberitahukan bahwa data yang dicari tidak tersedia atau tidak ada dalam data film tersebut.
 
 ![cari film](https://user-images.githubusercontent.com/122262846/234489615-81abadbf-dfc2-4b53-bc1e-4f12c27ca2a0.png)
 
+Namun, Apabila admin sudah mengiput data yang diminta oleh program dengan benar, maka program akan memberikan output berupa letak dari film yang dicari oleh admin tersebut. 
 
 ![hasil cari](https://user-images.githubusercontent.com/122262846/234489745-b88dcd86-63da-498f-866b-c08900a99824.png)
 
-- Hapus Film
+#### 4. Hapus Film
+Fitur ini berfungsi untuk menghapus data film yang tersedia. Penggunaanya adalah dengan menginput indeks dari film yang akan dihapus dengan tepat dan benar. Apabila inputan salah, maka admin tidak dapat menggunakan fitur ini. Namun apabila inputan admin benar dan tepat, yaitu indeks film yang akan dihapus ada dalam data film, maka program ini akan menghapus data film tersebut sesuai inputan admin dan artinya program ini berhasil.
 
 ![hapus film](https://user-images.githubusercontent.com/122262846/234489837-fc01587f-6220-46ea-be04-db5468c061a5.png)
 
 
-- Ubah Film
+#### 5. Ubah Film
+Fitur ubah film digunakan untuk mengubah atau meng-update data film yang ada menjadi sebuah data film yang baru, baik untuk mengubah nama atau judul film, jam tayang film maupun mengubah harga film. Dalam mengubah film, admin harus menginput indeks dari film yang akan di update atau diubah dengan benar. Karena apabila inputan tidak sesuai maka fitur ini tidak dpat berfungsi. 
 
 ![update film](https://user-images.githubusercontent.com/122262846/234489875-76a7bc90-b8d1-4176-a52f-86ce55eefe6d.png)
 
+Apabila inputan benar, yaitu indeks yang di-input admin tersedia, maka dapat menginput data baru daru sebuah film. Admin harus menginput kembali nama film, jam tayang serta harga film untuk mengubah dan menyimpan data film terbaru.
+
 ![update film 2](https://user-images.githubusercontent.com/122262846/234489897-95b4c3dc-ba64-45f0-8e29-4b3996979c5e.png)
 
+#### 6. Data Film yang Masuk
+Fitur ini berfungsi untuk melihat history dari data film. artnya, semua film yang pernah di input atau ditambah, akan di masukkan ke history film walaupun sudah dihapus dari data film yang tersedia.
 
-- Log Out
+Jadi output dari program ini adalah semua film yang pernah ditambah oleh admin, baik yang sekarang tersedia maupun yang sudah tidak tersedia karena dihapus oleh admin. Dalam program ini juga, admin dapat mengetahui jumlah dari keseluruhan data film yang pernah ditambah.
+
+#### 7. Urutkan Film
+Fitur ini berfungsi untuk mengurutkan data film dilihat dari nama atau judul film. Dalam fitur ini, pengurutan dapat dilakukan secara ascending dan descending.
+
+Pengurutan secara ascending dilakukan dengan mengurutkan film dari abjad awal sampai abjad akhir (a-z).
+
+Sedangkan pengurutan descending adalah kebalikan dari pengurutan ascending, yaitu mengurutkan film dari abjad akhir sampai abjad awal (z-a).
+
+#### 8. Log Out
+Fitur ini digunakan untuk keluar dari akun yang saat ini sedang digunakan. Pada fitur ini, Ketika admin berhasil log out maka program akan memberitahukan waktu log out admin berupa tanggal dan jam log out.
 
 ![log out](https://user-images.githubusercontent.com/122262846/234489949-674ae054-d609-46a9-9485-2e8bc18c245d.png)
 
-- Keluar Aplikasi
+#### 9. Keluar Aplikasi
+Fitur keluar aplikasi digunakan untuk keluar dari program atau dapat dikatakan untuk mengakhiri semua proses program yang terjadi. Apabila admin keluar aplikasi, maka program akan memberikan output yaitu “Terima Kasih Telah Mengunjungi Bioskop kami”, maka berakhirlah proses program bioskop ini.
 
 ![KA Admin](https://user-images.githubusercontent.com/122262846/234490070-41683d59-88ea-4e10-b860-0600282d1fed.png)
 
 
-3. Menu Pelanggan
-
+### C. Menu Pelanggan
 Pada menu Pelanggan ini, terdapat 4 fitur diantaranya ada struk pembelian, beli film, log out, dan keluar aplikasi seperti gambar di bawah ini
 
 ![menu pelanggan](https://user-images.githubusercontent.com/122262846/234257139-90b88f65-90e7-4cb1-8586-a6a1dc748bb2.png)
 
 Fungsionalitas dari Fitur di atas antara lain:
 
-- struk pembelian
+#### 1. struk pembelian
 Setelah membeli Film, maka akan ada struk pembelian yang disimpan pada database. maka setiap ada pembelian, maka akan tercatat data film yang telah di beli pada database. tampilan invoice ada pada gambar di bawah ini
 
 ![invoice](https://user-images.githubusercontent.com/122262846/234488506-09d1a7c7-0c8d-4039-af6e-0bb7d4f52698.png)
 
-- Beli Film
+#### 2. Beli Film
 Fitur Beli Film ini berfungsi agar kita bisa membeli film yang ada. jika memilih fitur beli film, maka akan muncul isi film yang ada. lalu pilih film dan masukkan nominal uang. jika pembayaran berhasil, maka data pembelian film akan tersimpan pada database invoice.
 
 ![beli film](https://user-images.githubusercontent.com/122262846/234488551-cfe03b43-3de7-4eba-9dce-740f7cc57e05.png)
 
-- Log Out
+#### 3. Log Out
 Fitur log out berfungsi untuk keluar dari akun saat ini. jika memiliki 2 akun, maka kita akan bisa memasukkan akun tersebut lagi.
 
 ![log out](https://user-images.githubusercontent.com/122262846/234488589-d166a83b-df6f-467c-ab5d-91a209eaaaa6.png)
 
-- Keluar Aplikasi
+#### 4. Keluar Aplikasi
 Fitur Keluar Aplikasi ini fungsinya untuk memberhentikan program.
 
 ![KA Pengguna](https://user-images.githubusercontent.com/122262846/234490460-0118fa9c-8293-44e2-bc32-59402e342fbe.png)
