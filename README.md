@@ -376,24 +376,28 @@ Program bioskop ini diawali dengan fungsi welcome dimana terdapat 4 pilihan menu
 - Apabila username dan/atau password salah maka program akan memberitahukan bahwa username dan password salah.
 - Namun, apabila username dan password yang diinput admin benar, maka tunggu beberapa saat maka login berhasil.
 - Apabila berhasil login, maka admin akan masuk ke menu admin dengan berbagai fitur atau pilihan yang dapat dipilih oleh admin untuk melanjutkan program yang akan dijalankan oleh admin.
-- Input **pilihan ‘1’** adalah menu **tambah film**, dimana pada fitur ini admin dapat menambah data film dengan menginput judul film, jam tanyang dan harga dari tiket film tersebut.
+- Fitur yang ada pada menu admin sebanyak 9 fitur, sehingga ketika admin menginput pilihan menu lebih dari 9 maka outputnya adalah "Pilihan Hanya 1-9! Jika Ingin Kembali Ketik ya atau Jika Tidak Tekan Enter. Ingin Kembali?".
+- Input **pilihan ‘1’** adalah menu **tambah film**, dimana pada fitur ini admin dapat menambah data film dengan menginput judul film, jam tayang, harga tiket dan studia dimana studio yang tersedia ada 5 studio, sehingga admin dapat memilih satu studio dari 5 studio yang dapat digunakan.
+- Harga harus bertipe data int yaitu berupa angka. apabila admin menginput harga berupa str atau hutuf, maka penambahan film tidak akan berhasil dengan pemberitahuan "Mohon Memasukkan harga film Hanya Menggunakan Angka" dan mengulang ke menu pilihan admin.
 - Setelah berhasil menambah data film, maka program aka membawa admin ke menu admin kembali sehingga dapat lanjut ke menu yang lainnya.
-- Input **pilihan ‘2’** adalah menu **lihat film** yaitu untuk melihat daftar film yang tersedia. Ketika admin menginput ‘2’ maka program akn menampilkan data film yang tersedia dan data lain seperti jam tayang dan harga.
+- Input **pilihan ‘2’** adalah menu **lihat film** yaitu untuk melihat daftar film yang tersedia. Ketika admin menginput ‘2’ maka program akan menampilkan data film yang tersedia seperti nama film, jam tayang, studio dah harga dari film tersebut.
 - Tekan enter untuk melanjutkan program, maka program akan kembali ke menu admin.
 - Input **pilihan'3'** adalah menu **cari film** dimana admin dapat mencari film dengan menginput judul film yang ingin dicari.
 - Apabila judul yang diinput tidak ada dalam daftar film maka akan ada pemberitahuan program bahwa judul yang dicari tidak ada di nomor urut dan tidak ada di daftar.
-- Namun apabila judul yang input ada dalam daftar film maka pemberitahuan berupa judul yang diinput ada dinomor urut berikut. Setelah itu kembali ke menu admin lagi.
+- Namun apabila judul yang input ada dalam daftar film maka pemberitahuan berupa judul yang diinput terdapat dinomor urut berikut. Setelah itu kembali ke menu admin lagi.
 - Input **pilihan ‘4’** adalah untuk **menghapus data film** yang tersedia. Dalam hal ini admin dapat menginput nomor film yang akan dihapus.
+- Dalam menginput nomor film yang akan dihapus, admin harus menginput data bertipe int atau angka. jika tidak maka akan ada pemberitahuan "Masukan Dengan Angka".
 - Apabila nomor film yang akan dihapus tidak tersedia di daftar film, maka akan ada output pemberitahuan bahwa pilihan nomor tidak ada.
 - Selanjutnya program akan mengulang ke menu admin sehingga admin bisa kembali menginput ‘4’ untuk masuk ke program hapus film. 
 - Apabila nomor film yang diinput ada dalam daftar data film maka ketika klik ‘Enter’ data akan terhapus sesuai dengan index inputan admin.
 - Input **pilihan ‘5’** adalah menu untuk **mengupdate data film** yang ada. Dalam hal ini admin dapat mengupdate dengan menginput index film yang akan diupdate.
+- Dalam menginput nomor film yang akan diubah atau diupdate, admin harus menginput data bertipe int atau angka. jika tidak maka akan ada pemberitahuan "Masukan Dengan Angka".
 - Apabila admin menginput nomor film yang tidak ada dalam daftar film, maka outputnya adalah pilihan nomor tidak ada dan program akan menuntun admin ke menu admin sehingga admin dapat kembali masuk ke menu update film.
-- Apabila admin menginput nomor film yang ada dalam daftar film selanjutnya admin akan menginput nama atau judul film yang beru, jam tayang, dan harga film.
+- Apabila admin menginput nomor film yang ada dalam daftar film selanjutnya admin akan menginput nama atau nama film yang beru, jam tayang, studio dan harga film.
 - Inputan harga film harus berupa angka. apabila user menginput data berupa huruf, maka update tidak berhasil dan program akan memberitahu bahwa harga film yang dimasukkan harus berupa angka dan admin akan kembali ke menu admin.
 - Apabila harga film yang diinput berupa angka maka update akan berhasil dan secra otomatis data dari index film yang diinput untuk diupdate akan terupdate secara otomatis.
-- Input **pilihan ‘6’** adalah menu untuk masuk ke tempat **penyimpanan history film**. Pada menu ini output program adalah daftar film yang pernah masuk dan banyak film yang pernah masuk.
-- Input **pilihan ‘7’** adalah menu yang digunakan untuk **melihat daftar film**. Dalam pilihan ini akan ditampilkan nama film yang ada dimana bisa diurutkan secara ascending maupun descending.
+- Input **pilihan ‘6’** adalah menu untuk masuk ke tempat **penyimpanan history film**. Pada menu ini output program adalah daftar film dan banyak film yang pernah masuk.
+- Input **pilihan ‘7’** adalah menu yang digunakan untuk **melihat daftar film**. Dalam pilihan ini akan ditampilkan nama film yang ada, dimana bisa diurutkan secara ascending maupun descending.
     - Pada inputan ‘7’ terdpat **3 menu pilihan**. **Pilihan ‘1’** merupakan program untuk mengurutkan judul film secara **ascending** yaitu dari a sampai z.
     - **Pilihan ‘2’** merupakan program untuk mengurutkan judul film secara **descending** yaitu pengurutan dari huruf z sampai a.
     - **Pilihan ‘3’** akan membawa admin ke menu admin **kembali**.
@@ -406,6 +410,7 @@ Program bioskop ini diawali dengan fungsi welcome dimana terdapat 4 pilihan menu
 - Apabila username dan/atau password salah maka program akan memberitahukan bahwa username dan password salah.
 - Namun, apabila username dan password yang diinput pelanggan benar, maka tunggu beberapa saat maka login berhasil.
 - Apabila berhasil login, maka admin akan masuk ke menu pelanggan dengan berbagai fitur atau pilihan yang dapat dipilih oleh pelanggan untuk melanjutkan program yang akan dijalankan pelanggan.
+- Fitur yang ada pada menu admin sebanyak 4 fitur, sehingga ketika admin menginput pilihan menu lebih dari 4 maka outputnya adalah "Pilihan Hanya 1-4! Jika Ingin Kembali Ketik ya atau Jika Tidak Tekan Enter. Ingin Kembali?".
 - **Pilihan ‘1**’ adalah **struk pembelian** atau invoice. Dalam menu ini, pelanggan dapat melihat invoice dari pembelian yang kita lakukan.
 - Apabila belum melakukan pembelian film, maka utuk invocenya kosong sehingga pelanggan harus terlebih dahulu membeli film.
 - Apabila pelanggan sudah melakukan pembelian, maka akan ditampilan data pembelian seperti nama film, jam tayang, harga, uang pelanggan serta kembalian.
