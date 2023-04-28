@@ -1,16 +1,26 @@
 # Bioskop
 
-## Nama Anggota
-- Amalia Kartika Sari (2209116013)
-- Angelia Cristin (2209116015)
-- Bertha Joy Rodo Saragi (2209116047)
+## **Nama Anggota**
+- **Amalia Kartika Sari** - 2209116013
+- **Angelia Cristin** - 2209116015
+- **Bertha Joy Rodo Saragi** - 2209116047
 
-## Deskripsi Program
+## **Deskripsi Program**
 Bioskop merupakan wadah bagi masyarakat untuk menikmati pertunjukkan film, dimana penonton mencurahkan segenap perhatiannya dan perasaannya kepada gambar hidup yang disaksikan. Film ditampilkan pada sebuah layar lebar dengan efek suara yang menjadi salah satu daya tarik masyarakat untuk menyaksikan sebuah film di tempat ini. film yang ditampilkan dalam bioskop juga bermacam-macam baik untuk anak-anak, remaja dan dewasa.
 
 Program ini merupakan program bioskop dimana ada login untuk admin dan pelanggan dengan masing-masing fitur yang ada didalamnya yang fungsi utamanya adalah untuk memudahkan admin untuk menambah, mengupdate, menghapus dan melihat data film yang ada, juga memudahkan pelanggan dalam melakukan pembelian film bahkan pengeditan akun pelanggan tersebut.
 
-## Struktur Program 
+## **Modul Implementasi**
+Adapun modul yang digunakan dalam proyek ini yaitu:
+
+* **OS** : menyediakan fungsi untuk berinteraksi dengan sistem operasi.
+* **Time** : fungsi ini membawa parameter berupa angka yang menyatakan detik (lama) penundaan. Misalkan, ingin menunda selama 2 detik: time.sleep(2)
+* **Date time** : digunakan untuk mengolah variabel bernilai tanggal/date dan waktu/time.
+* **Typing** : 
+* **Pretty table** : fitur yang digunakan untuk membuat table di bahasa pemrograman python. Fitur tersebut merupakan bagian dari library dan digunakan dalam pembuatan tabel khusus pemrograman ini.
+* **Mysql connector** : digunakan untuk membuat Koneksi Database MySQL/MariaDB dan Python dengan MySQL Connector
+
+## **Struktur Program** 
 Struktur Program yang kami gunakan pada project yang berjudul “Bioskop” kali ini adalah:
 ### 1.	Pretty Table
 
@@ -357,62 +367,62 @@ Fitur Keluar Aplikasi ini fungsinya untuk memberhentikan program.
 
 ![KA Pengguna](https://user-images.githubusercontent.com/122262846/234490460-0118fa9c-8293-44e2-bc32-59402e342fbe.png)
 
-## Cara Penggunaan
+## **Cara Penggunaan**
 Program bioskop ini diawali dengan fungsi welcome dimana terdapat 4 pilihan menu yaitu admin, pelanggan, pelanggan baru atau register dan keluar aplikasi. Pada menu ini user dapat melakukan pemilihan untuk login sesuai role user yaitu admin atau pelanggan.
 
 ### Pilihan 1: Admin 
-- Ketika user menginput ‘1’ artinya user login sebagai admin.
+- Ketika user menginput **‘1’** artinya user **login sebagai admin**.
 - Untuk login, admin harus menginput nama dan password yang telah ada
 - Apabila username dan/atau password salah maka program akan memberitahukan bahwa username dan password salah.
 - Namun, apabila username dan password yang diinput admin benar, maka tunggu beberapa saat maka login berhasil.
 - Apabila berhasil login, maka admin akan masuk ke menu admin dengan berbagai fitur atau pilihan yang dapat dipilih oleh admin untuk melanjutkan program yang akan dijalankan oleh admin.
-- Input pilihan ‘1’ adalah menu tambah film, dimana pada fitur ini admin dapat menambah data film dengan menginput judul film, jam tanyang dan harga dari tiket film tersebut.
+- Input **pilihan ‘1’** adalah menu **tambah film**, dimana pada fitur ini admin dapat menambah data film dengan menginput judul film, jam tanyang dan harga dari tiket film tersebut.
 - Setelah berhasil menambah data film, maka program aka membawa admin ke menu admin kembali sehingga dapat lanjut ke menu yang lainnya.
-- Input pilihan ‘2’ adalah menu lihat film yaitu untuk melihat daftar film yang tersedia. Ketika admin menginput ‘2’ maka program akn menampilkan data film yang tersedia dan data lain seperti jam tayang dan harga.
+- Input **pilihan ‘2’** adalah menu **lihat film** yaitu untuk melihat daftar film yang tersedia. Ketika admin menginput ‘2’ maka program akn menampilkan data film yang tersedia dan data lain seperti jam tayang dan harga.
 - Tekan enter untuk melanjutkan program, maka program akan kembali ke menu admin.
-- Input pilihan’3’ adalah menu cari film dimana admin dapat mencari film dengan menginput judul film yang ingin dicari.
+- Input **pilihan'3'** adalah menu **cari film** dimana admin dapat mencari film dengan menginput judul film yang ingin dicari.
 - Apabila judul yang diinput tidak ada dalam daftar film maka akan ada pemberitahuan program bahwa judul yang dicari tidak ada di nomor urut dan tidak ada di daftar.
 - Namun apabila judul yang input ada dalam daftar film maka pemberitahuan berupa judul yang diinput ada dinomor urut berikut. Setelah itu kembali ke menu admin lagi.
-- Input pilihan ‘4’ adalah untuk menghapus data film yang tersedia. Dalam hal ini admin dapat menginput nomor film yang akan dihapus.
+- Input **pilihan ‘4’** adalah untuk **menghapus data film** yang tersedia. Dalam hal ini admin dapat menginput nomor film yang akan dihapus.
 - Apabila nomor film yang akan dihapus tidak tersedia di daftar film, maka akan ada output pemberitahuan bahwa pilihan nomor tidak ada.
 - Selanjutnya program akan mengulang ke menu admin sehingga admin bisa kembali menginput ‘4’ untuk masuk ke program hapus film. 
 - Apabila nomor film yang diinput ada dalam daftar data film maka ketika klik ‘Enter’ data akan terhapus sesuai dengan index inputan admin.
-- Input pilihan ‘5’ adalah menu untuk mengupdate data film yang ada. Dalam hal ini admin dapat mengupdate dengan menginput index film yang akan diupdate.
+- Input **pilihan ‘5’** adalah menu untuk **mengupdate data film** yang ada. Dalam hal ini admin dapat mengupdate dengan menginput index film yang akan diupdate.
 - Apabila admin menginput nomor film yang tidak ada dalam daftar film, maka outputnya adalah pilihan nomor tidak ada dan program akan menuntun admin ke menu admin sehingga admin dapat kembali masuk ke menu update film.
 - Apabila admin menginput nomor film yang ada dalam daftar film selanjutnya admin akan menginput nama atau judul film yang beru, jam tayang, dan harga film.
 - Inputan harga film harus berupa angka. apabila user menginput data berupa huruf, maka update tidak berhasil dan program akan memberitahu bahwa harga film yang dimasukkan harus berupa angka dan admin akan kembali ke menu admin.
 - Apabila harga film yang diinput berupa angka maka update akan berhasil dan secra otomatis data dari index film yang diinput untuk diupdate akan terupdate secara otomatis.
-- Input pilihan ‘6’ adalah menu untuk masuk ke tempat penyimpanan history film. Pada menu ini output program adalah daftar film yang pernah masuk dan banyak film yang pernah masuk.
-- Input pilihan ‘7’ adalah menu yang digunakan untuk melihat daftar film. Dalam pilihan ini akan ditampilkan nama film yang ada dimana bisa diurutkan secara ascending maupun descending.
-    - Pada inputan ‘7’ terdpat 3 menu pilihan. Pilihan ‘1’ merupakan program untuk mengurutkan judul film secara ascending yaitu dari a sampai z.
-    - Pilihan ‘2’ merupakan program untuk mengurutkan judul film secara descending yaitu pengurutan dari huruf z sampai a.
-    - Pilihan ‘3’ akan membawa admin ke menu admin kembali.
-- Pilihan selanjutnya pada menu admin adalah input pilihan ‘8’. Dimana pilihan ini digunakan untuk keluar logout dari program dan kembali awal yaitu fungsi welcome untuk pemilihan role yang akan digunakan untuk log in program bioskop.
-- Input pilihan ‘9’ adalah menu keluar aplikasi. Ketika admin menginput 9 maka artinya admin keluar aplikasi dan outputnya adalah “terima kasih telah mengunjungi bioskop kami”.
+- Input **pilihan ‘6’** adalah menu untuk masuk ke tempat **penyimpanan history film**. Pada menu ini output program adalah daftar film yang pernah masuk dan banyak film yang pernah masuk.
+- Input **pilihan ‘7’** adalah menu yang digunakan untuk **melihat daftar film**. Dalam pilihan ini akan ditampilkan nama film yang ada dimana bisa diurutkan secara ascending maupun descending.
+    - Pada inputan ‘7’ terdpat **3 menu pilihan**. **Pilihan ‘1’** merupakan program untuk mengurutkan judul film secara **ascending** yaitu dari a sampai z.
+    - **Pilihan ‘2’** merupakan program untuk mengurutkan judul film secara **descending** yaitu pengurutan dari huruf z sampai a.
+    - **Pilihan ‘3’** akan membawa admin ke menu admin **kembali**.
+- Pilihan selanjutnya pada menu admin adalah input **pilihan ‘8’**. Dimana pilihan ini digunakan untuk **logout** dari program dan kembali awal yaitu fungsi welcome untuk pemilihan role yang akan digunakan untuk log in program bioskop.
+- Input **pilihan ‘9’** adalah menu **keluar aplikasi**. Ketika admin menginput 9 maka artinya admin keluar aplikasi dan outputnya adalah “terima kasih telah mengunjungi bioskop kami”.
 
 ### Pilihan 2: Pelanggan
-- Ketika user menginput ‘2’ artinya user login sebagai pelanggan.
+- Ketika user menginput **‘2’** artinya user **login sebagai pelanggan**.
 - Untuk login, pelanggan harus menginput nama dan password yang telah ada.
 - Apabila username dan/atau password salah maka program akan memberitahukan bahwa username dan password salah.
 - Namun, apabila username dan password yang diinput pelanggan benar, maka tunggu beberapa saat maka login berhasil.
 - Apabila berhasil login, maka admin akan masuk ke menu pelanggan dengan berbagai fitur atau pilihan yang dapat dipilih oleh pelanggan untuk melanjutkan program yang akan dijalankan pelanggan.
-- Pilihan ‘1’ adalah struk pembelian atau invoice. Dalam menu ini, pelanggan dapat melihat invoice dari pembelian yang kita lakukan.
+- **Pilihan ‘1**’ adalah **struk pembelian** atau invoice. Dalam menu ini, pelanggan dapat melihat invoice dari pembelian yang kita lakukan.
 - Apabila belum melakukan pembelian film, maka utuk invocenya kosong sehingga pelanggan harus terlebih dahulu membeli film.
 - Apabila pelanggan sudah melakukan pembelian, maka akan ditampilan data pembelian seperti nama film, jam tayang, harga, uang pelanggan serta kembalian.
-- Pilihan ‘2’ adalah menu beli film. Dalam menu ini, pelanggan dapat meliht data film yang tersedia dan dapat membelinya.
+- **Pilihan ‘2’** adalah menu **beli film**. Dalam menu ini, pelanggan dapat meliht data film yang tersedia dan dapat membelinya.
 - Apabila tidak ada film yang tersedia, maka outputnya adalah film tidak tersedia sehingga pelanggan akan dibawa kembali ke menu pelanggan.
 - Apabila terdapat film dalam data film, maka pelanggan akan diperintah untuk menginput indeks film yang akan di beli kemudian menginput uang pelanggan.
 - Apabila pelanggan menginput uang berupa huruf maka akan terjadi looping ke penginputan uang pelanggan kembali.
 - Ketika uang < harga film maka akan ada pemberitahuan bahwa uang tidak cukup dan pelanggan akan dibawa kembali ke menu pelanggan.
 - Namun, apabila uang >= harga film, maka pembelian akan berhasil dan data pembelian akan di insert ke data invoice. Untuk melihat struk pembelian maka dapat memilih kembali pilihan ‘1’ pada menu pelanggan. Dalam struk pembelian akan diberitahukan nama film, jam tayang, harga, uang pelanggan serta kembalian. 
-- Pilihan selanjutnya pada menu pelanggan adalah input pilihan ‘3’. Dimana pilihan ini digunakan untuk keluar logout dari program dan kembali awal yaitu fungsi welcome untuk pemilihan role yang akan digunakan untuk log in program bioskop.
-- Input pilihan ‘4’ adalah menu keluar aplikasi. Ketika pelanggan menginput 3 maka artinya admin keluar aplikasi dan outputnya adalah “terima kasih telah mengunjungi bioskop kami”.
+- Pilihan selanjutnya pada menu pelanggan adalah input **pilihan ‘3’**. Dimana pilihan ini digunakan untuk **logout** dari program dan kembali awal yaitu fungsi welcome untuk pemilihan role yang akan digunakan untuk log in program bioskop.
+- Input **pilihan ‘4’** adalah menu **keluar aplikasi**. Ketika pelanggan menginput 3 maka artinya admin keluar aplikasi dan outputnya adalah “terima kasih telah mengunjungi bioskop kami”.
 
 ### Pilihan 3: pelanggan baru
-- Apabila user menginput pilihan ‘3’ pada menu log in atau welcome, maka program akan menuntun ke pembuatan akun baru bagi pelanggan atau register. 
+- Apabila user menginput **pilihan ‘3’** pada menu log in atau welcome, maka program akan menuntun ke **pembuatan akun baru bagi pelanggan atau register**. 
 - Dalam menu regis ini, user harus menginput nama dan password yang ingin di daftarkan.
 - Apabila nama yang diinput sudah ada dalam data pelanggan, maka regis tidak akan berhasil dan aka nada pemberitahuan “maaf, username sudah digunakan”, sehingga user harus menginput kembali data username dan password.
 - Setelah user menginput username dan password untuk membuat akun baru untuk pelanggan, maka data yang diinput akan masuk ke database data pelanggan, sehingga dapat melakukan login dengan akun tersebut.
 
 ### Pilihan 4: Keluar aplikasi
-- Pilihan ‘4’ adalah menu keluar aplikasi, dimana pilihan ini adalah untuk mengakhiri semua program yang berjalan. Outputnya adalah “terimakasih sudah mengunjungi bioskop kami”.
+- **Pilihan ‘4’** adalah menu **keluar aplikasi**, dimana pilihan ini adalah untuk mengakhiri semua program yang berjalan. Outputnya adalah “terimakasih sudah mengunjungi bioskop kami”.
