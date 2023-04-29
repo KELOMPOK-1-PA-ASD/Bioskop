@@ -5,6 +5,9 @@
 - **Angelia Cristin** - 2209116015
 - **Bertha Joy Rodo Saragi** - 2209116047
 
+<img width="960" alt="Screenshot 2023-04-29 112342" src="https://user-images.githubusercontent.com/121868323/235307274-c52a6a0e-9058-4713-9955-e28432ab5509.png">
+
+
 ## **Deskripsi Program**
 Bioskop merupakan wadah bagi masyarakat untuk menikmati pertunjukkan film, dimana penonton mencurahkan segenap perhatiannya dan perasaannya kepada gambar hidup yang disaksikan. Bioskop dapat menenangkan, menyenangkan, maupun memberikan experience baru kepada setiap penontonnya. Film ditampilkan pada sebuah layar lebar dengan efek suara yang menjadi salah satu daya tarik masyarakat untuk menyaksikan sebuah film di tempat ini. film yang ditampilkan dalam bioskop juga dapat mencakup berbagai kalangan usia, mulai dari anak-anak, remaja, dewasa, maupun lansia. tak jarang bioskop juga menjadi opsi date untuk berbagai pasangan!.
 
