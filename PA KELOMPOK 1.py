@@ -301,3 +301,37 @@ def search():
     else:
         print(x,"Tidak ada di no urut atau tidak ada di daftar")
 
+def search():
+    n = len(jb)
+    x = input("Masukan judul film Yang anda cari : ")
+    clear()
+    print("tunggu sebentar.")
+    clear()
+    print("tunggu sebentar..")
+    clear()
+    print("tunggu sebentar...")
+    clear()
+    isi = searching(jb, x, n)
+    if isi >= 0:
+        print("Ditemukan di no urut ke :",isi + 1)
+    else:
+        print(x,"Tidak ada di no urut atau tidak ada di daftar")
+
+# Queue
+class Queue:
+    def __init__(self): 
+        self.items = []
+    def isEmpty(self): 
+        return self.items == []
+    def enqueue(self, item): 
+        self.items.insert(0, item)
+    def dequeue(self): 
+        return self.items.pop()
+    def size(self): 
+        return len(self.items)
+    def peek(self):
+        return self.items[len(self.items)-1]
+    def semua(self): 
+        return self.items
+      
+      
