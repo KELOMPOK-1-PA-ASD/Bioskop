@@ -443,7 +443,6 @@ def welcome():
     while True:
         try:
             options = int(input("masukan pilihan: "))
-            
             break
         except:
             print("Masukan Dengan Angka")
@@ -464,14 +463,217 @@ def welcome():
         raise SystemExit
     else:
         print("Pilihan Tidak Ada")
-        
         welcome()
         
-        
-        
-        
-        
-        
+def menu_admin():
+    ulang = 'ya'
+    while ulang == 'ya':
+        print ('+==========================+')
+        print ("|   Selamat Datang Admin   |")
+        print ('+==========================+')
+        print ("|1. Tambah film            |")
+        print ("|2. Lihat film             |")
+        print ("|3. cari film              |")
+        print ("|4. Hapus film             |")
+        print ("|5. Ubah film              |")
+        print ("|6. Data film yg masuk     |")
+        print ("|7. Urutkan film           |")
+        print ("|8. Logout                 |")
+        print ("|9. Keluar aplikasi        |")
+        print ('+==========================+')
+        while True:
+            try:
+                pilih = int(input("Masukkan Pilihan Anda: "))
+                break
+            except:
+                print("Masukan Dengan Angka")
+        if __name__ == '__main__':
+            if pilih == 1:
+                clear()
+                tempat.addfilm()
+                input(">>>Tekan enter untuk kembali ke menu<<<")
+                time.sleep(0.5)
+                clear()
+            elif pilih == 2:
+                if len(tempat.films) < 1:
+                    clear()
+                    print('!!! tidak ada film yg tersedia !!!')
+                    input(">>>Tekan enter untuk kembali ke menu<<<")
+                    time.sleep(0.5)
+                    clear()
+                    continue
+                clear()
+                tempat.lihatdata()
+                input(">>>Tekan enter untuk kembali ke menu<<<")
+                time.sleep(0.5)
+                clear()
+                time.sleep(2)
+            elif pilih == 3:
+                if len(tempat.films) < 1:
+                    clear()
+                    print('!!! tidak ada film yg tersedia !!!')
+                    input(">>>Tekan enter untuk kembali ke menu<<<")
+                    time.sleep(0.5)
+                    clear()
+                    continue
+                clear()
+                tempat.lihatdata()
+                search()
+                input(">>>Tekan enter untuk kembali ke menu<<<")
+                time.sleep(0.5)
+                clear()
+                    
+            elif pilih == 4:
+                if len(tempat.films) < 1:
+                    clear()
+                    print('!!! tidak ada film yg tersedia !!!')
+                    input(">>>Tekan enter untuk kembali ke menu<<<")
+                    time.sleep(0.5)
+                    clear()
+                    continue
+                clear()
+                tempat.lihatdata()
+                while True:
+                    try:   
+                        item = int(input('Pilih Nomor film Yang Ingin Dihapus: '))
+                        time.sleep(2)
+                        break
+                    except:
+                        print("!!! Masukan Dengan Angka !!!")
+                if item  > len(tempat.films):
+                    clear()
+                    print('!!! Pilihan Nomor Tidak Ada !!!')
+                    input(">>>Tekan enter untuk kembali ke menu<<<")
+                    time.sleep(0.5)
+                    clear()
+                else:
+                    tempat.films.remove(tempat.films[item - 1])
+                    jb.pop(item-1)
+                    clear()
+                    print("film Yang Anda Pilih Telah Dihapus")
+                    input(">>>Tekan enter untuk kembali ke menu<<<")
+                    time.sleep(0.5)
+                    clear()
+            elif pilih == 5:
+                time.sleep(2)
+                if len(tempat.films) < 1:
+                    clear()
+                    print('tidak ada film yg tersedia')
+                    input(">>>Tekan enter untuk kembali ke menu<<<")
+                    time.sleep(0.5)
+                    clear()
+                    continue
+                clear()
+                tempat.lihatdata()
+                while True:
+                    try:
+                        item = int(input('Pilih Nomor film Yang Ingin Diupdate: '))
+                        break
+                    except:
+                        print("Masukan Dengan Angka")
+                if item  > len(tempat.films):
+                    clear()
+                    print('Pilihan Nomor Tidak Ada')
+                    input(">>>Tekan enter untuk kembali ke menu<<<")
+                    time.sleep(0.5)
+                    clear()
+                else:
+                    clear()
+                    ubah_barang = tambah()
+                    if ubah_barang.addfilm() == True :
+                        tempat.films.remove(tempat.films[item - 1])
+                        jb.pop(item-1)
+                        tempat.films.insert(item - 1, ubah_barang)
+                        print('>>>film Yang Anda Pilih Telah Diupdate<<<')
+                        input(">>>Tekan enter untuk kembali ke menu<<<")
+                        time.sleep(0.5)
+                        clear()
+                if len(tempat.films) < 1:
+                    clear()
+                    print('tidak ada film yg tersedia')
+                    input(">>>Tekan enter untuk kembali ke menu<<<")
+                    time.sleep(0.5)
+                    clear()
+                    continue
+            elif pilih == 6:
+                clear()
+                time.sleep(2)
+                if len(tempat.films) < 1:
+                    clear()
+                    print('Tidak Ada film Yang Pernah Di Data atau Kosong')
+                    input(">>>Tekan enter untuk kembali ke menu<<<")
+                    time.sleep(0.5)
+                    clear()
+                    continue
+                clear()
+                print(link.printList())
+                print("Banyaknya film Yang Pernah Masuk: ", queue.size())
+                input("\nTekan Enter Untuk Kembali")
+                clear()
+                time.sleep(2)
+            elif pilih == 7:
+              clear()
+              print ("============================================")
+              print ("1. urutkan judul film secara ascending  ")
+              print ("2. urutkan judul film secara descending ")
+              print ("3. kembali                                  ")
+              print ("============================================")
+              while True:
+                  try:
+                      pilih = int(input("Masukkan Pilihan Anda: "))
+                      break
+                  except:
+                      print("Masukan Dengan Angka")
+                      clear()
+              if pilih == 1:
+                  clear()
+                  time.sleep(2)
+                  print("data film")
+                  n = len(jb)
+                  quickSort(jb, 0, n-1)
+                  for x in jb:
+                      print("~>",x)
+                  input(">>>Tekan enter untuk kembali ke menu<<<")
+                  time.sleep(0.5)
+                  clear()
+
+              elif pilih == 2:
+                  clear()
+                  time.sleep(0.5)
+                  print("data film")
+                  n = len(jb)
+                  quickSort(jb, 0,  n-1 )
+                  for i in range(0, len(jb)) :
+                      jb[i] = (jb[i])
+                      jb.sort(reverse = True)
+                  for x in jb:
+                      print("~>",x)
+                  input(">>>Tekan enter untuk kembali ke menu<<<")
+                  time.sleep(0.5)
+                  clear()
+            elif pilih == 8:
+                clear()
+                time.sleep(0.1)
+                print((">>>anda berhasil logout<<<"))
+                clear()
+                print(">>>waktu anda logout<<<")
+                print()
+                print("~ tanggal  :",day)
+                print("~ jam      :",current_time)
+                print()
+                input(">>>Tekan enter untuk kembali ke menu<<<")
+                clear()
+                welcome()
+            elif pilih == 9:
+                print(">>>Terima Kasih Telah Mengunjungi Bioskop kami<<<")
+                raise SystemExit
+            else:
+                print("Pilihan Hanya 1-9!")
+                print("Jika Ingin Kembali Ketik ya atau Jika Tidak Tekan Enter")
+                ulang = input('Ingin Kembali? ')
+    else:
+        print(">>>Terima Kasih Telah Mengunjungi Bioskop kami<<<")
+        raise SystemExit
         
 def menu_member():
     ulang = 'ya'
@@ -549,5 +751,4 @@ def menu_member():
         print(">>>Terima Kasih Telah Mengunjungi Bioskop kami<<<")
         raise SystemExit
 
-welcome()        
-        
+welcome()
