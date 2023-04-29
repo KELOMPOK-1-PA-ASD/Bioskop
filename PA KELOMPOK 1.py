@@ -96,3 +96,145 @@ class tambah:
     def str(self):
         return '\t'.join(str(x) for x in [self._jenisfilm, self._jam_tayang, self._harga, self._studio])
 
+class penyimpanan:
+
+    def __init__(self):
+        self.films = []
+        self._jenisfilm = ''
+        self._jam_tayang = ''
+        self._harga = 0
+        self._studio = 0
+
+    def addfilm(self):
+        film = tambah()
+        if film.addfilm() == True:
+            self.films.append(film)
+            print ()
+            print('film Telah Ditambahkan')
+
+    def membeli_film(self):
+        tabel.field_names = ['No.', 'nama film', 'jam_tayang','studio', 'harga']
+        tabel.clear_rows()
+        for idx, film in enumerate(self.films) :
+            tabel.add_row([idx + 1, film._jenisfilm, film._jam_tayang, film._studio, film._harga])
+        print(tabel)
+        while True:
+            try:   
+                pilih = int(input('Pilih nomor film yang ingin dibeli: '))
+                time.sleep(2)
+                break
+            except:
+                print("!!! Masukan Dengan Angka !!!")
+
+        if pilih > len(self.films):
+            print('Film Tidak Ditemukan')
+            return False
+
+        else:
+            while True:
+                try:
+                    uang = int(input('Masukkan uang anda: '))
+                    harga = self.films[pilih - 1]._harga
+        
+                    if uang < harga:
+                        print('uang tidak cukup')
+                        return False
+                    else:
+                        nama_film = self.films[pilih - 1]._jenisfilm
+                        jam_tayang = self.films[pilih - 1]._jam_tayang
+                        studio = self.films[pilih - 1]._studio
+                        kembalian = uang - harga
+
+                        beli_film.append({
+                        'jenis': nama_film,
+                        'jam_tayang': jam_tayang,
+                        'studio': studio,
+                        'harga': harga,
+                        'jumlah': uang,
+                        'kembalian': kembalian
+                        })
+                        print("film Yang Anda Pilih Telah Dibeli")
+                        sql = "INSERT INTO invoice (nama_film, jam_tayang, studio, harga, uang, kembalian) VALUES (%s, %s,%s,%s,%s,%s)"
+                        val = (nama_film, jam_tayang, studio, harga, uang, kembalian)
+                        mycursor.execute(sql, val)
+                        mydb.commit()
+                        print(mycursor.rowcount, "record inserted.")
+                        clear()
+                        menu_member()
+                        return True
+                except:
+                    print("!!!Masukan Dengan Angka!!!")
+
+
+    def lihatdata(self):
+        tabel.field_names = ['No.', 'nama film', 'jam_tayang', 'studio', 'harga']
+        tabel.clear_rows()
+        for idx, film in enumerate(self.films) :
+            tabel.add_row([idx + 1, film._jenisfilm, film._jam_tayang, film._studio, film._harga])
+        print(tabel)
+
+    def __str__(self):
+        return '\t'.join(str(x) for x in [self.films])
+
+     
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+        self.count = 0
+    
+    def addLast(self, data):
+        if self.head is None:
+            self.head = Node(data)
+            self.count += 1
+        else:
+            nodeAkhir = self.head
+            while nodeAkhir.next is not None:
+                nodeAkhir = nodeAkhir.next
+            nodeAkhir.next = Node(data)
+            self.count += 1
+            
+    def deleteNode(self,position):
+        if self.head == None:
+            return
+        temp = self.head
+        
+        if position == 0:
+            self.head = temp.next
+            temp = None
+            return
+        
+        for i in range (position,-1):
+            temp = temp.next
+            if temp is None:
+                break
+        if temp is None :
+            return
+        if temp.next is None:
+            return
+        next = temp.next.next
+        temp.next = None
+        temp.next = next
+        
+    def printList(self):
+        if self.head is None:
+            print('Linked List Kosong')
+        else:
+            nodeTampil = self.head
+            print("film Yang Pernah Masuk: ")
+            while nodeTampil is not None:
+                print('-> ', nodeTampil.data)
+                nodeTampil = nodeTampil.next
+        print()
+        
+    def iterate_item(self):
+        # Iterate the list.
+        current_item = self.head
+        while current_item:
+            val = current_item.data
+            current_item = current_item.next
+        yield val
