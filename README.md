@@ -19,7 +19,6 @@ Adapun modul yang digunakan dalam proyek ini yaitu:
 * **OS** : menyediakan fungsi untuk berinteraksi dengan sistem operasi.
 * **Time** : fungsi ini membawa parameter berupa angka yang menyatakan detik (lama) penundaan. Misalkan, ingin menunda selama 2 detik: time.sleep(2)
 * **Date time** : digunakan untuk mengolah variabel bernilai tanggal/date dan waktu/time.
-* **Typing** : 
 * **Pretty table** : fitur yang digunakan untuk membuat table di bahasa pemrograman python. Fitur tersebut merupakan bagian dari library dan digunakan dalam pembuatan tabel khusus pemrograman ini.
 * **Mysql connector** : digunakan untuk membuat Koneksi Database MySQL/MariaDB dan Python dengan MySQL Connector
 
