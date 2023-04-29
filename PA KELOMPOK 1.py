@@ -51,4 +51,48 @@ def clear():
     time.sleep(0.5)
     os.system('cls')
     
+class tambah:
+
+    def __init__(self):
+        self._jenisfilm = ''
+        self._jam_tayang = ''
+        self._harga = 0
+        self._studio = 0
+
+    def addfilm(self):
+        try:
+            self._jenisfilm = input('Masukkan nama film: ')
+            self._jam_tayang = input('Masukkan jam_tayang : ')
+            self._harga = int(input('Masukkan harga film: '))
+            print("""
+            =========================================
+            ||             kode studio 1-5         ||
+            =========================================
+            """)
+            self._studio = int(input("masukkan nomor studio : "))
+            if self._studio > 5:
+                print("mohon masukkan sesuai pilihan")
+                return False
+            elif self._jam_tayang in kusus_jam_tayang and self._studio in kusus_studio:
+                print("maaf jadwal bertabrakan")
+                os.system("pause")
+                time.sleep(2)
+                clear()
+                return False
+            else:
+                kusus_jam_tayang.append(self._jam_tayang)
+                queue.enqueue(self._jenisfilm)
+                jb.append(self._jenisfilm)
+                link.addLast(self._jenisfilm)
+                kusus_jenis.append(self._jenisfilm)
+                kusus_harga.append(self._harga)
+                kusus_studio.append(self._studio)
+                return True
+        except ValueError:
+            print('film Tidak Dapat Ditambahkan')
+            print('Mohon Memasukkan harga film Hanya Menggunakan Angka')
+            return False
+
+    def str(self):
+        return '\t'.join(str(x) for x in [self._jenisfilm, self._jam_tayang, self._harga, self._studio])
 
