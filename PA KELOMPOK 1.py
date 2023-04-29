@@ -301,22 +301,6 @@ def search():
     else:
         print(x,"Tidak ada di no urut atau tidak ada di daftar")
 
-def search():
-    n = len(jb)
-    x = input("Masukan judul film Yang anda cari : ")
-    clear()
-    print("tunggu sebentar.")
-    clear()
-    print("tunggu sebentar..")
-    clear()
-    print("tunggu sebentar...")
-    clear()
-    isi = searching(jb, x, n)
-    if isi >= 0:
-        print("Ditemukan di no urut ke :",isi + 1)
-    else:
-        print(x,"Tidak ada di no urut atau tidak ada di daftar")
-
 # Queue
 class Queue:
     def __init__(self): 
@@ -334,4 +318,12 @@ class Queue:
     def semua(self): 
         return self.items
       
-      
+tempat = penyimpanan()         
+film = tambah()          
+queue = Queue()           
+link = LinkedList()                          
+jb = []             
+kusus_jenis = []              
+kusus_jam_tayang = []             
+kusus_harga = [] 
+kusus_studio = []    
