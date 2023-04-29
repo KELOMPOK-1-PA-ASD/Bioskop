@@ -257,3 +257,47 @@ def quickSort(arr, low, high):
         pi = partition(arr, low, high)
         quickSort(arr, low, pi-1)
         quickSort(arr, pi+1, high)
+
+# search with fibonacci search
+def searching(isi, x, n):
+    fibonaci2 = 0 
+    fibonaci1 = 1 
+    fibonaci = fibonaci2 + fibonaci1 
+    while (fibonaci < n):
+        fibonaci2 = fibonaci1
+        fibonaci1 = fibonaci
+        fibonaci = fibonaci2 + fibonaci1
+    offset = -1
+    while (fibonaci > 1):
+        i = min(offset+fibonaci2, n-1)
+        if (isi[i] < x):
+            fibonaci = fibonaci1
+            fibonaci1 = fibonaci2
+            fibonaci2 = fibonaci - fibonaci1
+            offset = i
+        elif (isi[i] > x):
+            fibonaci = fibonaci2
+            fibonaci1 = fibonaci1 - fibonaci2
+            fibonaci2 = fibonaci - fibonaci1
+        else:
+            return i
+    if(fibonaci1 and isi[n-1] == x):
+        return n-1
+    return -1
+
+def search():
+    n = len(jb)
+    x = input("Masukan judul film Yang anda cari : ")
+    clear()
+    print("tunggu sebentar.")
+    clear()
+    print("tunggu sebentar..")
+    clear()
+    print("tunggu sebentar...")
+    clear()
+    isi = searching(jb, x, n)
+    if isi >= 0:
+        print("Ditemukan di no urut ke :",isi + 1)
+    else:
+        print(x,"Tidak ada di no urut atau tidak ada di daftar")
+
