@@ -283,18 +283,21 @@ Fitur yang ada di dalam menu login ada 4 yaitu Login sebagai Admin, Pelanggan, P
 #### 1. Menu Login Admin
 pada menu login admin kita diminta untuk memasukkan nama dan password agar dapat masuk ke dalam menu admin. jika nama dan password salah, maka akan mengulang saat memasukkan nama dan password, tetapi jika benar akan masuk ke dalam menu admin
 
-![login admin](https://user-images.githubusercontent.com/122262846/234479456-840101aa-f398-4a05-bba3-7eeb055fb6e1.png)
+![login admin](https://user-images.githubusercontent.com/122262846/235283478-4d90dbdd-38d3-463f-a918-8480c52c518f.png)
+
 
 
 #### 2. Menu Login Pelanggan
 Pada menu ini, kita juga akan diminta untuk memasukkan nama dan password kita.jika nama dan password benar maka akan masuk ke menu pengguna. dan jika gagal maka akan berulang saat memasukkan nama dan password
 
-![login pengguna](https://user-images.githubusercontent.com/122262846/234479541-e806e4cb-8ed2-4e4d-8899-33914f17a602.png)
+![pengguna](https://user-images.githubusercontent.com/122262846/235283488-a2e17f15-6651-4fe7-ba8f-5ac3835730dd.png)
+
 
 #### 3. Menu Pelanggan baru
 Pada menu Pengguna baru, akan diarahkan untuk membuat akun baru dengan memasukkan nama dan password seperti gabar di bawah ini. lalu akan masuk ke database yang dimana semua akun pengguna disimpan.
 
-![register](https://user-images.githubusercontent.com/122262846/234479698-b566abdb-f833-4b6b-b0de-280b911f3cbd.png)
+![register](https://user-images.githubusercontent.com/122262846/235283499-ff3fc6bf-0676-4b15-8ac4-03d3f00c5f5b.png)
+
 
 #### 4. Keluar Aplikasi
 
@@ -309,47 +312,61 @@ Fitur yang digunakan pada menu admin ada 9 yaitu:
 #### 1. Tambah Film
 Fitur ini berfungsi untuk menambah data film yang dapat dibeli oleh pelanggan. Dalam menambah film, admin harus menginput data film berupa nama atau judul film, jam tayang film dan harga film. 
 
-![tambah film](https://user-images.githubusercontent.com/122262846/234489548-11186917-e582-4a34-82df-e9676d4b81ab.png)
+![tambah film](https://user-images.githubusercontent.com/122262846/235283507-a930203a-fb35-4103-986e-c65547219c14.png)
+
 
 
 #### 2. Lihat Film
 Fitur ini berfungsi untuk menampilkan data film yang tersedia. Dalam fitur lihat film ini, admin dapat melihat film apa saja yang terdata dengan jam tayang dan harga film tersebut.
 
-![lihat film](https://user-images.githubusercontent.com/122262846/234489582-141acf3e-1554-46b9-b385-e5c2088e4bf8.png)
+![lihat film](https://user-images.githubusercontent.com/122262846/235283516-ee1562ed-ca00-4d6f-9ac6-0b2a49bada79.png)
+
 
 #### 3. Cari Film
 Fitur ini digunakan untuk mencari film, untuk mengetahui apakah film itu tersedia atau tidak tersedia. Untuk menggunakan fitur ini admin harus menginput judul film yang akan dicari dengan benar. Apabila admin sudah mengiput data yang diminta oleh program dengan benar, maka program akan memberikan output berupa letak dari film yang dicari oleh admin tersebut. Apabila data yang diinput oleh admin tidak ada dalam data film, maka program akan memberitahukan bahwa data yang dicari tidak tersedia atau tidak ada dalam data film tersebut.
 
-![cari film](https://user-images.githubusercontent.com/122262846/234489615-81abadbf-dfc2-4b53-bc1e-4f12c27ca2a0.png)
+![cari film](https://user-images.githubusercontent.com/122262846/235283523-f956a78d-2e0b-42e6-a020-3e15b0750931.png)
+
 
 Namun, Apabila admin sudah mengiput data yang diminta oleh program dengan benar, maka program akan memberikan output berupa letak dari film yang dicari oleh admin tersebut. 
 
-![hasil cari](https://user-images.githubusercontent.com/122262846/234489745-b88dcd86-63da-498f-866b-c08900a99824.png)
+![hasil cari](https://user-images.githubusercontent.com/122262846/235283532-9bbc7035-0939-4f11-a17e-4290b8e55808.png)
+
 
 #### 4. Hapus Film
 Fitur ini berfungsi untuk menghapus data film yang tersedia. Penggunaanya adalah dengan menginput indeks dari film yang akan dihapus dengan tepat dan benar. Apabila inputan salah, maka admin tidak dapat menggunakan fitur ini. Namun apabila inputan admin benar dan tepat, yaitu indeks film yang akan dihapus ada dalam data film, maka program ini akan menghapus data film tersebut sesuai inputan admin dan artinya program ini berhasil.
 
-![hapus film](https://user-images.githubusercontent.com/122262846/234489837-fc01587f-6220-46ea-be04-db5468c061a5.png)
+![hapus film](https://user-images.githubusercontent.com/122262846/235283543-0a56f227-e9bb-4c85-8629-de91bb4acee4.png)
+
 
 
 #### 5. Ubah Film
 Fitur ubah film digunakan untuk mengubah atau meng-update data film yang ada menjadi sebuah data film yang baru, baik untuk mengubah nama atau judul film, jam tayang film maupun mengubah harga film. Dalam mengubah film, admin harus menginput indeks dari film yang akan di update atau diubah dengan benar. Karena apabila inputan tidak sesuai maka fitur ini tidak dpat berfungsi. 
 
-![update film](https://user-images.githubusercontent.com/122262846/234489875-76a7bc90-b8d1-4176-a52f-86ce55eefe6d.png)
+![update](https://user-images.githubusercontent.com/122262846/235283553-5f6b6fbf-962c-45f1-b458-861cb534b3a4.png)
+
 
 Apabila inputan benar, yaitu indeks yang di-input admin tersedia, maka dapat menginput data baru daru sebuah film. Admin harus menginput kembali nama film, jam tayang serta harga film untuk mengubah dan menyimpan data film terbaru.
 
-![update film 2](https://user-images.githubusercontent.com/122262846/234489897-95b4c3dc-ba64-45f0-8e29-4b3996979c5e.png)
+![ubah 2](https://user-images.githubusercontent.com/122262846/235283558-21f031a2-b5bd-438f-a5db-dfa92056c8d2.png)
+
 
 #### 6. Data Film yang Masuk
 Fitur ini berfungsi untuk melihat history dari data film. artnya, semua film yang pernah di input atau ditambah, akan di masukkan ke history film walaupun sudah dihapus dari data film yang tersedia.
+
+![film yg masuk](https://user-images.githubusercontent.com/122262846/235283567-c4753d24-3a21-432d-bdc9-efb2864ddae1.png)
+
 
 Jadi output dari program ini adalah semua film yang pernah ditambah oleh admin, baik yang sekarang tersedia maupun yang sudah tidak tersedia karena dihapus oleh admin. Dalam program ini juga, admin dapat mengetahui jumlah dari keseluruhan data film yang pernah ditambah.
 
 #### 7. Urutkan Film
 Fitur ini berfungsi untuk mengurutkan data film dilihat dari nama atau judul film. Dalam fitur ini, pengurutan dapat dilakukan secara ascending dan descending.
 
+![ascending](https://user-images.githubusercontent.com/122262846/235283586-3b3ea47f-159e-47f5-97a7-ad8d1d5aa990.png)
+
 Pengurutan secara ascending dilakukan dengan mengurutkan film dari abjad awal sampai abjad akhir (a-z).
+
+![descending](https://user-images.githubusercontent.com/122262846/235283593-0e367d4b-2441-46eb-9a24-dcec90f417f9.png)
 
 Sedangkan pengurutan descending adalah kebalikan dari pengurutan ascending, yaitu mengurutkan film dari abjad akhir sampai abjad awal (z-a).
 
@@ -374,12 +391,14 @@ Fungsionalitas dari Fitur di atas antara lain:
 #### 1. struk pembelian
 Setelah membeli Film, maka akan ada struk pembelian yang disimpan pada database. maka setiap ada pembelian, maka akan tercatat data film yang telah di beli pada database. tampilan invoice ada pada gambar di bawah ini
 
-![invoice](https://user-images.githubusercontent.com/122262846/234488506-09d1a7c7-0c8d-4039-af6e-0bb7d4f52698.png)
+![invoice](https://user-images.githubusercontent.com/122262846/235283600-0e279563-404d-4473-a853-ccba8fa6f778.png)
+
 
 #### 2. Beli Film
 Fitur Beli Film ini berfungsi agar kita bisa membeli film yang ada. jika memilih fitur beli film, maka akan muncul isi film yang ada. lalu pilih film dan masukkan nominal uang. jika pembayaran berhasil, maka data pembelian film akan tersimpan pada database invoice.
 
-![beli film](https://user-images.githubusercontent.com/122262846/234488551-cfe03b43-3de7-4eba-9dce-740f7cc57e05.png)
+![beli film](https://user-images.githubusercontent.com/122262846/235283607-2ec61b63-4e98-41cc-9f04-fe3badfa45f5.png)
+
 
 #### 3. Log Out
 Fitur log out berfungsi untuk keluar dari akun saat ini. jika memiliki 2 akun, maka kita akan bisa memasukkan akun tersebut lagi.
