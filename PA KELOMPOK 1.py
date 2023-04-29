@@ -46,3 +46,9 @@ beli_film = [
             },
         ]
 
+# functions
+def clear():
+    time.sleep(0.5)
+    os.system('cls')
+    
+
