@@ -23,3 +23,26 @@ mydb = mysql.connector.connect(
   database="bioskop_1"
 )
 mycursor = mydb.cursor()
+
+print("""
+==================================================================
+||                  KELOMPOK 1 KELAS A1 ASD                     ||
+||      AMALIA KARTIKA SARI                2209116013           ||
+||      ANGELIA CRISTIN                    2209116015           ||
+||      BERTHA JOY RODO SARAGI             2209116047           ||
+==================================================================
+""")
+input(">>>Tekan enter untuk kembali ke menu<<<")
+time.sleep(0.5)
+
+beli_film = [
+            {
+                "jenis":"",
+                "jam_tayang":"",
+                "studio":0,
+                "harga":0,
+                "jumlah":0,
+                "kembalian":0,
+            },
+        ]
+
