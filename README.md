@@ -273,6 +273,9 @@ pegawai = cursor.fetchone()
 Terdapat 3 bagian besar fitur di dalam Big Project kami. yaitu Menu Login, Menu Admin, dan Menu Pelanggan.
 
 ### A. Menu login
+```python
+
+```
 Fitur yang ada di dalam menu login ada 4 yaitu Login sebagai Admin, Pelanggan, Pelanggan Baru, dan Keluar Aplikasi. dapat di lihat pada gambar di bawah ini.
 
 ![menu login](https://user-images.githubusercontent.com/122262846/234256985-1852bb45-ac7c-4f34-946c-2a80efac4f08.png)
