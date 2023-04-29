@@ -556,7 +556,6 @@ Fitur ini berfungsi untuk menampilkan data film yang tersedia. Dalam fitur lihat
 
 ![lihat film](https://user-images.githubusercontent.com/122262846/235283516-ee1562ed-ca00-4d6f-9ac6-0b2a49bada79.png)
 
-
 #### 3. Cari Film
 ```python
 def search():
@@ -595,11 +594,9 @@ Fitur ini digunakan untuk mencari film, untuk mengetahui apakah film itu tersedi
 
 ![cari film](https://user-images.githubusercontent.com/122262846/235283523-f956a78d-2e0b-42e6-a020-3e15b0750931.png)
 
-
 Namun, Apabila admin sudah mengiput data yang diminta oleh program dengan benar, maka program akan memberikan output berupa letak dari film yang dicari oleh admin tersebut. 
 
 ![hasil cari](https://user-images.githubusercontent.com/122262846/235283532-9bbc7035-0939-4f11-a17e-4290b8e55808.png)
-
 
 #### 4. Hapus Film
 ```python
