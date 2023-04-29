@@ -20,6 +20,27 @@ Adapun modul yang digunakan dalam proyek ini yaitu:
 * **Pretty table** : fitur yang digunakan untuk membuat table di bahasa pemrograman python. Fitur tersebut merupakan bagian dari library dan digunakan dalam pembuatan tabel khusus pemrograman ini.
 * **Mysql connector** : digunakan untuk membuat Koneksi Database MySQL/MariaDB dan Python dengan MySQL Connector
 
+## **Instalasi Modul**
+```bash
+pip install prettytable
+```
+
+```bash
+pip install python-time
+```
+
+```bash
+pip install DateTime
+```
+
+```bash
+pip install mysql-connector-python
+```
+
+```bash
+pip install pwinput
+```
+
 ## **Struktur Program** 
 Struktur Program yang kami gunakan pada project yang berjudul “Bioskop” kali ini adalah:
 ### 1.	Pretty Table
