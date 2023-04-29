@@ -326,4 +326,228 @@ jb = []
 kusus_jenis = []              
 kusus_jam_tayang = []             
 kusus_harga = [] 
-kusus_studio = []    
+kusus_studio = []  
+
+# log in and menu
+username = ''
+password = ''
+def login():
+    global username
+    global password
+    username = input("Masukkan Nama: ")
+    password = pwinput.pwinput(prompt= "Masukkan password: ")
+    cek = "SELECT * FROM data_pelanggan WHERE username = %s AND password = %s"
+    values = (username, password)
+
+    cursor = mydb.cursor()
+    cursor.execute(cek, values)
+
+    pelanggan = cursor.fetchone()
+    if pelanggan:
+        clear()
+        print("tunggu sebentar.")
+        clear()
+        print("tunggu sebentar..")
+        clear()
+        print("tunggu sebentar...")
+        clear()
+        print("login berhasil")
+        clear()
+        menu_member()
+    else:
+        print(("username dan password anda salah"))
+        os.system("pause")
+        time.sleep(2)
+        welcome()
+
+def register():
+    try:
+        username = input('Masukan Nama Baru: ')
+        print("||   HARAP MASUKKAN ANGKA    ||")
+        password = pwinput.pwinput(prompt = 'Masukan Password Baru: ')
+
+        ceknama = "SELECT * FROM data_pelanggan WHERE username = %s and password = %s"
+        values = (username, password)
+
+        cursor = mydb.cursor()
+        cursor.execute(ceknama, values)
+
+        pelanggan = cursor.fetchone()
+        if pelanggan:
+            print('Maaf, Username ini sudah digunakan')
+            time.sleep(3)
+            clear()
+            register()
+        else:
+            sql = "INSERT INTO data_pelanggan (username, password) VALUES (%s,%s)"
+            val = (username, password)
+            cursor.execute(sql, val)
+            mydb.commit()
+            print(cursor.rowcount, "record inserted.")
+            clear()
+            print("tunggu sebentar.")
+            clear()
+            print("tunggu sebentar..")
+            clear()
+            print("tunggu sebentar...")
+            clear()
+            print("akun baru berhasil dibuat")
+            welcome() 
+    except:
+        print("akun telah tersedia")
+        os.system("pause")
+        time.sleep(3)
+        clear()
+        register()
+
+def admin():
+    username = input("Masukkan Nama: ")
+    password = pwinput.pwinput(prompt="Masukkan password: ")
+
+    cek = "SELECT * FROM data_admin WHERE username = %s AND password = %s"
+    values = (username, password)
+
+    cursor = mydb.cursor()
+    cursor.execute(cek, values)
+
+    pegawai = cursor.fetchone()
+    if pegawai:
+        clear()
+        print("tunggu sebentar.")
+        clear()
+        print("tunggu sebentar..")
+        clear()
+        print("tunggu sebentar...")
+        clear()
+        print("login berhasil")
+        clear()
+        menu_admin()
+    else:
+        print(("username dan password anda salah"))
+        input(">>>Tekan enter untuk kembali ke menu<<<")
+        time.sleep(0.5)
+        clear()
+        welcome()
+
+def welcome():
+    os.system('cls')
+    print ('+===============================================+')
+    print ('|         Selamat datang di bioskop xxi         |'), 
+    print ('|         silakan login sesuai role anda        |'), 
+    print ('+===============================================+')
+    print ('|1. Admin                                       |'), 
+    print ('|2. pelanggan                                   |'), 
+    print ('|3. pelanggan baru                              |'), 
+    print ('|4. Keluar aplikasi                             |'), 
+    print ('+===============================================+')
+    while True:
+        try:
+            options = int(input("masukan pilihan: "))
+            
+            break
+        except:
+            print("Masukan Dengan Angka")
+    if options == 1:
+        clear()
+        admin()
+        clear()
+    elif options == 2:
+        clear()
+        login()
+        clear()
+    elif options == 3:
+        clear()
+        register()
+        clear()
+    elif options == 4:
+        print(">>>Terima Kasih Telah Mengunjungi Bioskop kami<<<")
+        raise SystemExit
+    else:
+        print("Pilihan Tidak Ada")
+        
+        welcome()
+        
+        
+        
+        
+        
+        
+        
+def menu_member():
+    ulang = 'ya'
+    while ulang == 'ya':
+        global username
+        print('=========================')
+        print(f'selamat datang {username}')
+        print("=========================")
+        print("|1. struk pembelian     |")
+        print("|2. beli film           |")
+        print("|3. logout              |")
+        print("|4. Keluar aplikasi     |")
+        print("=========================")
+        while True:
+            try:
+                pilih = int(input("Masukkan Pilihan Anda: "))
+                break
+            except:
+                print("Masukan Dengan Angka")
+        if __name__ == '__main__':
+            if pilih == 1:
+                clear()
+                print("==========================================")
+                print("            struk pembelian               ")
+                print()
+                for i in range(len(beli_film)):
+                    if beli_film[i]['jumlah'] > 1:
+                        print("nama film         : ",beli_film[i]['jenis'])
+                        print("jam_tayang film   : ",beli_film[i]['jam_tayang'])
+                        print("Harga film        : ",beli_film[i]['harga'])
+                        print("uang              : ",beli_film[i]['jumlah'])
+                        print("kembalian         : ",beli_film[i]['kembalian'])
+                        print("\n")
+
+                print("==========================================")
+                input(">>>Tekan enter untuk kembali ke menu<<<")
+                clear()
+                time.sleep(2)
+            elif pilih == 2:
+                time.sleep(2)
+                if len(tempat.films) < 1:
+                    clear()
+                    print('>>>film tidak tersedia<<<')
+                    input(">>>Tekan enter untuk kembali ke menu<<<")
+                    time.sleep(0.5)
+                    clear()
+                    continue
+                clear()
+                tempat.membeli_film()
+                input(">>>Tekan enter untuk kembali ke menu<<<")
+                time.sleep(0.5)
+                clear()
+            elif pilih == 3:
+                clear()
+                time.sleep(0.1)
+                print((">>>anda berhasil logout<<<"))
+                clear()
+                print(">>>waktu anda logout<<<")
+                print()
+                print("~ tanggal  :",day)
+                print("~ jam      :",current_time)
+                print()
+                input(">>>Tekan enter untuk kembali ke menu<<<")
+                clear()
+                welcome()
+            elif pilih == 4:
+                print(">>>Terima Kasih Telah Mengunjungi Bioskop kami<<<")
+                raise SystemExit
+            else:
+                print("Pilihan Hanya 1-4!")
+                print("Jika Ingin Kembali Ketik ya atau Jika Tidak Tekan Enter")
+                ulang = input('Ingin Kembali? ')
+                
+    else:
+        print(">>>Terima Kasih Telah Mengunjungi Bioskop kami<<<")
+        raise SystemExit
+
+welcome()        
+        
